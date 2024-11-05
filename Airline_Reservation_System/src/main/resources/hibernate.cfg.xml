@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<!-- Database connection settings -->
+<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property
+name="connection.url">jdbc:mysql://localhost:3306/airlinereservationsysem</property>
+<property name="connection.username">root</property>
+<property name="connection.password">Tiger*25</property>
+<!-- Automatically create or update database schema -->
+<property name="hbm2ddl.auto">update</property>
+<!-- Specify the dialect for your database -->
+<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+<!-- Enable or disable showing SQL statements in the console -->
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
+<!-- Specify the package(s) where your entity classes are located →
+<mapping class="com.sms.Student"/>
+<! Additional mappings can be included here -->
+<mapping class="com.demo.Airline_Reservation.entities.Customer"/>
+<mapping class="com.demo.Airline_Reservation.entities.Booking"/>
+<mapping class="com.demo.Airline_Reservation.entities.AirLine"/>
+<mapping class="com.demo.Airline_Reservation.entities.Payment"/>
+<mapping class="com.demo.Airline_Reservation.entities.Ticket"/>
+
+</session-factory>
+</hibernate-configuration>
